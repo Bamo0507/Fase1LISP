@@ -1,8 +1,9 @@
-;; Método principal, se llamarán y probarán los otros 3 métodos
+;; Método principal, se verifica el funcionamiento del método
 (defun main ()
     "Función principal para llamar a los otros métodos"
     (let ((n 10)) ; Cambia este valor por el término de Fibonacci que desees calcular
       (format t "El término ~a de la serie de Fibonacci es: ~a~%" n (fibonacci n))))
+
 
 ;; Método para calcular el término n de la serie Fibonacci
 (defun fibonacci (n)
