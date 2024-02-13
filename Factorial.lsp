@@ -1,11 +1,12 @@
 (defun factorial (n)
+  ;; Función para calcular el factorial de un número
   (if (<= n 1)
       1
       (* n (factorial (- n 1)))))
 
 (defun main ()
-  (format t "Ingrese un número para calcular su factorial: ")
-  (let ((num (read)))
-    (format t "El factorial es" num (factorial num))))
+  ;; Método principal
+  (let ((num 5)) ; Asignando un valor predeterminado de 5
+    (format t "El factorial de ~a es ~a~%" num (factorial num)))) ; Imprime el resultado del factorial de num
 
-(main)
+(main) ; Llamada al método principal
