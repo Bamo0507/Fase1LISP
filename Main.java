@@ -1,19 +1,17 @@
-import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        String filePath = "Fibonacci.lsp";
-        FileParser fileParser = new FileParser(filePath);
-        String fileContent = fileParser.parse();
-        
-        // Aquí puedes procesar el contenido del archivo como desees
-        System.out.println("Contenido del archivo:");
-        System.out.println();
-        System.out.println(fileContent);
-        System.out.println();
+        // Ejemplo de uso del Tokenizer y LispInterpreter
+        Tokenizer tokenizer = new Tokenizer();
 
-    
+        FileParser parser = new FileParser("condicional.lisp");
 
-        System.out.println(tokens);
+        // Cadena de ejemplo con una función Lisp
+        String input = parser.parse();
 
+        // Obtener los tokens
+        List<String> tokens = tokenizer.tokenize(input);
+        System.out.println("Tokens: " + tokens);
     }
 }

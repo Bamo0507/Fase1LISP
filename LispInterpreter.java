@@ -7,11 +7,10 @@ public class LispInterpreter {
         FileParser fileParser = new FileParser(filePath);
         String fileContents = fileParser.parse();
 
-        Tokenizer tokenizer = new Tokenizer();
-        List<String> tokens = tokenizer.tokenize(fileContents);
+        Tokenizer tokenizer = new Tokenizer(fileContents);
+        List<String> tokens = tokenizer.tokenize();
 
         LispInterpreter interpreter = new LispInterpreter();
-        interpreter.evaluate(tokens);
     }
     
     public void evaluate(List<String> tokens) {
