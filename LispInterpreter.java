@@ -3,9 +3,7 @@ import java.util.List;
 import java.util.Stack;
 
 public class LispInterpreter {
-    public static void main(String[] args) {
-    
-        String filePath = args[0];
+    public void interpretar(String filePath) {
         FileParser fileParser = new FileParser(filePath);
         String fileContents = fileParser.parse();
 
@@ -15,7 +13,7 @@ public class LispInterpreter {
         LispInterpreter interpreter = new LispInterpreter();
         interpreter.evaluate(tokens);
     }
-
+    
     public void evaluate(List<String> tokens) {
         Stack<Object> stack = new Stack<>();
         for (String token : tokens) {
