@@ -7,9 +7,9 @@ public class LispInterpreter {
         FileParser fileParser = new FileParser(filePath);
         String fileContents = fileParser.parse();
 
-        Tokenizer tokenizer = new Tokenizer(fileContents);
-        List<String> tokens = tokenizer.tokenize();
 
+        Tokenizer tokenizer = new Tokenizer();
+        List<String> tokens = tokenizer.tokenize(fileContents);
         LispInterpreter interpreter = new LispInterpreter();
     }
     
@@ -108,4 +108,3 @@ public class LispInterpreter {
         return result;
     }
 }
-        
