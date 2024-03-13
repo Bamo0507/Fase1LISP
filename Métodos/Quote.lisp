@@ -9,5 +9,3 @@
             (setq x 5)
             (- x 2)))))
 
-
-;; (metodo-complejo)

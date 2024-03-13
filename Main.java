@@ -11,8 +11,7 @@ public class Main {
         System.out.println(fileContent);
         System.out.println();
 
-        Tokenizer tokenizer = new Tokenizer(fileContent);
-        ArrayList<String> tokens = tokenizer.tokenize();
+    
 
         System.out.println(tokens);
 
